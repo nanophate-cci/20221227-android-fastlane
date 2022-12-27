@@ -1,0 +1,10 @@
+version:2.1
+jobs:
+  build:
+    docker:
+      working_directory: ~/code
+      docker:
+        - image: cimg/android:2022.09-node
+    steps:
+      - checkout
+      - run: sudo gem install bundler && bundle update
