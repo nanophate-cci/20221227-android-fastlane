@@ -6,5 +6,4 @@ jobs:
       - image: cimg/android:2022.12
     working_directory: ~/code
     steps:
-      - checkout
       - run: ruby -v
