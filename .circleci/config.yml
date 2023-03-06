@@ -1,10 +1,14 @@
 version: 2.1
 
+orbs:
+  ruby: circleci/ruby@2.0.0
+
 jobs:
   build:
     docker:
       - image: cimg/android:2023.02
     steps:
       - run: ruby -v
-      - run: sudo apt-get update && sudo apt-get install -y ruby-full
+      - ruby/install:
+          version: '3.2'
       - run: ruby -v
