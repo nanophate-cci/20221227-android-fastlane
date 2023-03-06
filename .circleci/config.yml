@@ -4,6 +4,7 @@ jobs:
   build:
     docker:
       - image: cimg/android:2023.02
-    working_directory: ~/code
     steps:
+      - run: ruby -v
+      - run: sudo apt-get update && sudo apt-get install -y ruby-full
       - run: ruby -v
