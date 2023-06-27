@@ -5,8 +5,9 @@ orbs:
 
 jobs:
   build:
-    docker:
-      - image: cimg/android:2023.02
+    machine:
+      image: android:2023.04.01
+    resource_class: arm.medium
     steps:
       - run: ruby -v
       - ruby/install:
